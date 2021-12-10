@@ -4,7 +4,7 @@
 
 namespace Adventure.Migrations
 {
-    public partial class AddingForgotDbSets : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,8 +27,8 @@ namespace Adventure.Migrations
                 {
                     Id = table.Column<ulong>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Money = table.Column<int>(type: "INTEGER", nullable: false),
-                    Reputation = table.Column<int>(type: "INTEGER", nullable: false)
+                    Money = table.Column<long>(type: "INTEGER", nullable: false),
+                    Reputation = table.Column<long>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -43,8 +43,8 @@ namespace Adventure.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: false),
-                    Level = table.Column<int>(type: "INTEGER", nullable: false),
-                    TradeValue = table.Column<int>(type: "INTEGER", nullable: false),
+                    Level = table.Column<long>(type: "INTEGER", nullable: false),
+                    TradeValue = table.Column<long>(type: "INTEGER", nullable: false),
                     CategoryId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
@@ -65,7 +65,7 @@ namespace Adventure.Migrations
                     Id = table.Column<ulong>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     ResourceId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Amount = table.Column<int>(type: "INTEGER", nullable: false),
+                    Amount = table.Column<long>(type: "INTEGER", nullable: false),
                     UserId = table.Column<ulong>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>

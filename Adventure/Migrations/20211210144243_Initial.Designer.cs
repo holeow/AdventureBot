@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Adventure.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20211209170551_IntToLong")]
-    partial class IntToLong
+    [Migration("20211210144243_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

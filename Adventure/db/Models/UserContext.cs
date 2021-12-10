@@ -9,6 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using Adventure.Helpers;
 
 namespace Adventure
 {
@@ -24,13 +25,7 @@ namespace Adventure
         public UserContext()
         {
             
-            var path = Path.GetDirectoryName(AppContext.BaseDirectory) + "\\db";
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
-            
-            DbPath = System.IO.Path.Join(path, "users.db");
+            DbPath = System.IO.Path.Join(FileManager.DatabaseDirectoryPath, "users.db");
         }
 
         // The following configures EF to create a Sqlite database file in the
