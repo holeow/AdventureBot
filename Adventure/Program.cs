@@ -29,7 +29,7 @@ namespace Adventure
             //  This is, however, insecure, particularly if you plan to have your code hosted in a public repository.
             var token = FileManager.SecretConfig["token"];
 
-            //  "BOT_TOKEN": "OTE2MzcyMTQyODkzOTczNjA0.YapMEA.WcgoO4obIT4RXNA6JrcT3HGzEEs",
+            
             //"TEST_GUILD_ID": "916380934406811738"
             // Some alternative options would be to keep your token in an Environment Variable or a standalone file.
             // var token = Environment.GetEnvironmentVariable("NameOfYourEnvironmentVariable");
